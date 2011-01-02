@@ -20,6 +20,11 @@ namespace Raven.Client
 	public interface IDocumentSession : IDisposable
 	{
 		/// <summary>
+		/// Extension point for bundles API
+		/// </summary>
+		IDocumentSessionBundleEndpoint Bundles { get; }
+		
+		/// <summary>
 		/// Get the accessor for advanced operations
 		/// </summary>
 		/// <remarks>
@@ -107,5 +112,6 @@ namespace Raven.Client
 		void Store(object entity);
 #endif
 	}
+
 #endif
 }

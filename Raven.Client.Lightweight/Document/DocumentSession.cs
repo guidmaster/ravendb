@@ -68,6 +68,14 @@ namespace Raven.Client.Document
 		}
 
 		/// <summary>
+		/// Extension point for bundles API
+		/// </summary>
+		public IDocumentSessionBundleEndpoint Bundles
+		{
+			get { return new BundlesExtension(this); }
+		}
+
+		/// <summary>
 		/// Get the accessor for advanced operations
 		/// </summary>
 		/// <remarks>

@@ -314,6 +314,13 @@ namespace Raven.Client.Shard
 			return GetSingleShardSession(shardIds).Advanced.GetDocumentUrl(entity);
 		}
 
+		/// <summary>
+		/// Extension point for bundles API
+		/// </summary>
+		public IDocumentSessionBundleEndpoint Bundles
+		{
+			get { return new BundlesExtension(this); }
+		}
 
 		/// <summary>
 		/// Get the accessor for advanced operations
@@ -557,5 +564,6 @@ namespace Raven.Client.Shard
 											   GetAppropriateShardedSessions<T>(null));		
 		}
 	}
+
 #endif
 }

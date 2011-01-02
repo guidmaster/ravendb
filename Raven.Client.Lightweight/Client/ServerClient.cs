@@ -43,6 +43,22 @@ namespace Raven.Client.Client
 		private readonly ReplicationInformer replicationInformer;
 
 		/// <summary>
+		/// The conventions for the request
+		/// </summary>
+		public DocumentConvention Convention
+		{
+			get { return convention; }
+		}
+
+		/// <summary>
+		/// The credentials for the requests
+		/// </summary>
+		public ICredentials Credentials
+		{
+			get { return credentials; }
+		}
+
+		/// <summary>
 		/// Initializes a new instance of the <see cref="ServerClient"/> class.
 		/// </summary>
 		/// <param name="url">The URL.</param>

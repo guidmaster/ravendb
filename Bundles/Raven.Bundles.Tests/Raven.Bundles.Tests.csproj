@@ -62,6 +62,8 @@
     <Compile Include="Authorization\Writing.cs" />
     <Compile Include="CascadeDelete\CascadeDelete.cs" />
     <Compile Include="Expiration\Expiration.cs" />
+    <Compile Include="Graphs\ShortDistance.cs" />
+    <Compile Include="Graphs\User.cs" />
     <Compile Include="IndexReplication\ReplicateToSql.cs" />
     <Compile Include="Replication\AttachmentReplication.cs" />
     <Compile Include="Replication\ConflictWhenReplicating.cs" />
@@ -97,6 +99,10 @@
       <Project>{9DEE8674-D0CD-430D-BD9B-6CD95F3CAB22}</Project>
       <Name>Raven.Storage.Esent</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Raven.Storage.Managed\Raven.Storage.Managed.csproj">
+      <Project>{DA99A419-E137-40DB-9495-0C363B479D4B}</Project>
+      <Name>Raven.Storage.Managed</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Raven.Bundles.Authorization\Raven.Bundles.Authorization.csproj">
       <Project>{034FFD8F-F917-4A45-B920-9C460CD66BAF}</Project>
       <Name>Raven.Bundles.Authorization</Name>
@@ -108,6 +114,10 @@
     <ProjectReference Include="..\Raven.Bundles.Expiration\Raven.Bundles.Expiration.csproj">
       <Project>{5E2C2AAA-31E4-4F2B-A3E3-E1332D2D338A}</Project>
       <Name>Raven.Bundles.Expiration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raven.Bundles.Graphs\Raven.Bundles.Graphs.csproj">
+      <Project>{357C2740-DE73-49AF-B7A5-DD367A2F3F9D}</Project>
+      <Name>Raven.Bundles.Graphs</Name>
     </ProjectReference>
     <ProjectReference Include="..\Raven.Bundles.IndexReplication\Raven.Bundles.IndexReplication.csproj">
       <Project>{2728BBA7-5142-445E-BAA5-142A25E0666D}</Project>
