@@ -16,7 +16,7 @@ namespace Raven.Bundles.Replication.Triggers
         public override ReadVetoResult AllowRead(string key, JObject metadata, ReadOperation operation,
                                                  TransactionInformation transactionInformation)
         {
-            if (ReplicationContext.IsInReplicationContext)
+            if (ReplicationContext.IsInReplicationContext || metadata == null)
                 return ReadVetoResult.Allowed;
             JToken value;
             if (metadata.TryGetValue("Raven-Delete-Marker", out value))
